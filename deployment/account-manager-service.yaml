@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: account-manager
+  labels:
+    app: account-manager
+spec:
+  type: NodePort
+  sessionAffinity: None
+  externalTrafficPolicy: Cluster
+  selector:
+    app: account-manager
+  ports:
+    - name: http
+      port: 8080

@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: order-manager
+  labels:
+    app: order-manager
+spec:
+  type: NodePort
+  sessionAffinity: None
+  externalTrafficPolicy: Cluster
+  selector:
+    app: order-manager
+  ports:
+    - name: http
+      port: 8080

@@ -1,0 +1,3 @@
+# Project exclude paths
+/account-manager/target/
+/order-manager/target/
